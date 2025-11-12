@@ -4,18 +4,20 @@
 #include <string>
 using namespace std;
 
- class Visitor{
-        private: string visitorName;
-        int ticketsBought;
-        
+ class Visitor {
+private:
+    string visitorName;
+    int ticketsBought;
+public:
+    Visitor() : visitorName(""), ticketsBought(0) {}
+    Visitor(string n, int t) : visitorName(n), ticketsBought(t) {}
+    ~Visitor() {}
+    void displayInfo() {
+        cout << "Visitor Info:" << endl;
+        cout << "Name: " << visitorName << endl;
+        cout << "Tickets Bought: " << ticketsBought << endl;
     }
-    public Visitores( string visitorName, int ticketsBought){
-          this -> visitorName = visitorName;
-            this -> ticketsBought = ticketsBought;
-    }
-    void displayInfo(){
-        cout<< "Visitores name:" << visitorName << "Numer of tickets boucht:"<< ticketsBought<< endl;
-    }
+};
    
     
 
