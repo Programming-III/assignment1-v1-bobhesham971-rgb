@@ -3,9 +3,9 @@
 
 #include "Animal.h"
 
-//define class bird here 
-
-
+public Animal
+    class Bird{
+        private: float wingSpan;
 
 
 
