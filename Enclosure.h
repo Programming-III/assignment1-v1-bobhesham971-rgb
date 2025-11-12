@@ -4,26 +4,31 @@
 #include "Animal.h"
 
  
-    class Enclouser{
-        private: 
-         a Animal*
-        int capacity;
-        int currentCount;
-        
+  class Enclosure {
+private:
+    Animal** animals;
+    int capacity;
+    int currentCount;
+public:
+    Enclosure(int cap = 10) : capacity(cap), currentCount(0) {
+        animals = new Animal*[capacity];
     }
-    public Enclouser (int capacity, int currentCount a Animal*){
-         this -> a Animal* = a Animal*
-          this -> capacity = capacity;
-            this -> currentCount = currentCount;
+    ~Enclosure() {
+        for (int i = 0; i < currentCount; ++i) {
+            delete animals[i];
+        }
+        delete[] animals;
     }
-    
-    
-    void addAnimal(Animal*a){
-        
+    void addAnimal(Animal* a) {
+        if (currentCount < capacity) {
+            animals[currentCount++] = a;
+        }
     }
-    void displayAnimals(){
-        
-        
+    void displayAnimals() {
+        cout << "Enclosure 1 Animals:" << endl;
+        for (int i = 0; i < currentCount; ++i) {
+            animals[i]->display();
+        }
     }
-    
+};
     
