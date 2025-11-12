@@ -10,21 +10,21 @@ using namespace std;
 
 // ============== MAIN FUNCTION ==============
 
-int main()
-{
-   
- Enclouser e()   
-    Animal a1("Lion","Hungry");
-     Animal a2("Parrot","Not Hungry");
-      Animal a3("Snake","Venomous","Hungry");
-      cout   << "Visitor info"<< endl;
-      cout << "Name"<< endl;
-   Visitor v(Name);
-   cout << "Tickets Bought:" << endl;
-   Visitor v2(ticketsBought);
-    
-    
-    
+int main() {
+    Enclosure e;
+
+    Mammal* lion = new Mammal("Lion", 5, true, "Golden");
+    Bird* parrot = new Bird("Parrot", 2, false, 0.5f);
+    Reptile* snake = new Reptile("Snake", 3, true, true);
+
+    e.addAnimal(lion);
+    e.addAnimal(parrot);
+    e.addAnimal(snake);
+
+    e.displayAnimals();
+
+    Visitor v("Sarah Ali", 3);
+    v.displayInfo();
 
     return 0;
 }
