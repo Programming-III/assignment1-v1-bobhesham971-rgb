@@ -5,26 +5,40 @@
 using namespace std;
 
 
- class Animal{
-        private:
-        string name;
-        int age;
-        bool isHungry;
-        
+cpp/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Animal {
+private:
+    string name;
+    int age;
+    bool isHungry;
+public:
+    Animal() : name(""), age(0), isHungry(true) {}
+    Animal(string n, int a, bool h) : name(n), age(a), isHungry(h) {}
+    ~Animal() {}
+    void display() {
+        cout << "* " << name << " (Age: " << age << ", ";
+        cout << (isHungry ? "Hungry" : "Not Hungry") << ")";
     }
-    public Animal (string name, int age, bool isHungry){
-        this -> name = name;
-          this -> age = age;
-            this -> isHungry = isHungry;
-    }
-    void display(){
-        cout << "name"<< name << "age"<< age << "The animal is:" << isHungry << endl;
-    }
-    void feed(){
-        if (isHungry == "Hungry"}{
-            cout << isHungry << endl;
-            
+    void feed() {
+        if (isHungry) {
+            cout << name << " is being fed." << endl;
+            isHungry = false;
+        } else {
+            cout << name << " is not hungry." << endl;
         }
-        else { cout << " Not Hungry"<< endl;}
-        
     }
+    string getName() const { return name; }
+    int getAge() const { return age; }
+    bool getIsHungry() const { return isHungry; }
+};
