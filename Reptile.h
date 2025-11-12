@@ -2,15 +2,10 @@
 #define REPTILE_H
 
 #include "Animal.h"
-
-//define reptile class here
-
-
-
-
-
-
-
-
-
-#endif
+  pulbic Animal
+    class Reptile{
+    
+        private: bool isVenomous
+        
+    }
+    
